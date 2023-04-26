@@ -22,8 +22,6 @@ const JobSearch = () => {
         setSearchLoader(true);
         setSearchResult([]);
 
-        console.log({params})
-
         try {
             const options = {
                 method: 'GET',

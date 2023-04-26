@@ -40,19 +40,19 @@ export default function JobDetails() {
     const displayTabContent = () => {
         switch (activeTab) {
             case 'About':
-                return <JobAbout info={data[0].job_description ?? 'No data provided'} />;
+                return <JobAbout info={data[0]?.job_description ?? 'No data provided'} />;
             case 'Qualifications':
                 return (
                     <Specifics
                         title="Qualifications"
-                        points={data[0].job_highlights?.Qualifications ?? ['N/A']}
+                        points={data[0]?.job_highlights?.Qualifications ?? ['N/A']}
                     />
                 );
             case 'Responsibilities':
                 return (
                     <Specifics
                         title="Responsibilities"
-                        points={data[0].job_highlights?.Responsibilities ?? ['N/A']}
+                        points={data[0]?.job_highlights?.Responsibilities ?? ['N/A']}
                     />
                 );
         }
